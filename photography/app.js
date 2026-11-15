@@ -5,7 +5,13 @@ const photographs = [
   {file:'kitchen-clean',title:'הפרטים שעושים בית',type:'interior',label:'INTERIORS / 03',alt:'מטבח לבן עם שולחן עץ וכיסאות בגוון חמרה'},
   {file:'balcony-clean',title:'מקום לנשום',type:'exterior',label:'EXTERIORS / 04',alt:'מרפסת עם פינת ישיבה פתוחה לנוף'},
   {file:'bathroom-clean',title:'שקט בקווים נקיים',type:'interior',label:'INTERIORS / 05',alt:'חדר רחצה בהיר עם מקלחון זכוכית'},
-  {file:'interior-clean',title:'לראות את החיבור בין החללים',type:'interior',label:'INTERIORS / 06',alt:'חלל מגורים רחב עם מטבח, סלון ופרטי צמחייה'}
+  {file:'interior-clean',title:'לראות את החיבור בין החללים',type:'interior',label:'INTERIORS / 06',alt:'חלל מגורים רחב עם מטבח, סלון ופרטי צמחייה'},
+  {"file": "rishon-duplex-living", "title": "אור בגובה כפול", "type": "interior", "label": "INTERIORS / 07", "alt": "סלון בגובה כפול עם חלונות גדולים, ספות לבנות וכורסה אדומה בראשון לציון"},
+  {"file": "rishon-terrace", "title": "המרפסת נפתחת אל הנוף", "type": "exterior", "label": "EXTERIORS / 08", "alt": "מרפסת עם דק עץ, פינת ישיבה וצמחייה מול נוף פתוח בראשון לציון"},
+  {"file": "rishon-open-plan", "title": "החיבור בין המטבח לפינת האוכל", "type": "interior", "label": "INTERIORS / 09", "alt": "חלל פתוח בגובה כפול עם מטבח לבן, שולחן אוכל וכורסה אדומה"},
+  {"file": "rishon-entrance", "title": "המפגש הראשון עם הבניין", "type": "exterior", "label": "EXTERIORS / 10", "alt": "כניסה לבניין עם מדרגות אבן, דלתות זכוכית וצמחייה ירוקה"},
+  {"file": "rishon-kitchen", "title": "מטבח בקווים בהירים", "type": "interior", "label": "INTERIORS / 11", "alt": "מטבח לבן עם אי, ארבעה כיסאות בר ומקרר בגוון מתכתי"},
+  {"file": "rishon-bedroom-office", "title": "חדר אחד, כמה שימושים", "type": "interior", "label": "INTERIORS / 12", "alt": "חדר שינה ועבודה עם ארון זכוכית, שולחן עץ וחלון לנוף"}
 ];
 const gear = {
   camera:{name:'Canon EOS R8',category:'המצלמה / צילום סטילס ווידאו',copy:'מצלמת Full Frame ללכידת האור, הצבע והפרטים של החלל. הבסיס לצילומי פנים וחוץ מדויקים.',image:'gear-camera',alt:'מצלמת Canon EOS R8'},
