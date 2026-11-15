@@ -8,12 +8,12 @@ const photographs = [
   {file:'interior-clean',title:'לראות את החיבור בין החללים',type:'interior',label:'INTERIORS / 06',alt:'חלל מגורים רחב עם מטבח, סלון ופרטי צמחייה'}
 ];
 const gear = {
-  camera:{name:'Canon EOS R8',category:'FULL FRAME / CAMERA',copy:'מצלמת Full Frame ללכידת האור, הצבע והפרטים של החלל.',image:'camera'},
-  lens:{name:'Canon RF 15–30mm',category:'WIDE ANGLE / LENS',copy:'עדשה רחבה שמאפשרת להראות את הקשר בין החללים ולבחור את הזווית המתאימה לכל חדר.',image:'lens'},
-  motion:{name:'DJI RS5',category:'MOVEMENT / GIMBAL',copy:'גימבל לצילום תנועה חלקה ומעבר בין החללים, ליצירת סיור מצולם בתוך הנכס.',icon:'RS5'},
-  drone:{name:'מבט מהאוויר',category:'A NEW PERSPECTIVE / DRONE',copy:'רחפן שמוסיף נקודת מבט על הנכס והסביבה. הצילום מותאם למיקום ולתנאי הטיסה.',icon:'↗'},
-  audio:{name:'DJI Mic Mini',category:'VOICE / AUDIO',copy:'מערכת מיקרופון אלחוטית להקלטת דיבור כשמשלבים הצגת נכס או קריינות בצילום.',image:'mic'},
-  tripod:{name:'חצובה',category:'STABILITY / SUPPORT',copy:'בסיס יציב לתכנון הקומפוזיציה, לשמירה על קווים ולצילום מוקפד של החלל.',image:'tripod'}
+  camera:{name:'Canon EOS R8',category:'המצלמה / צילום סטילס ווידאו',copy:'מצלמת Full Frame ללכידת האור, הצבע והפרטים של החלל. הבסיס לצילומי פנים וחוץ מדויקים.',image:'gear-camera',alt:'מצלמת Canon EOS R8'},
+  lens:{name:'Canon RF 15–30mm',category:'העדשה / מבט רחב על החלל',copy:'עדשה רחבה שמאפשרת להראות את החיבור בין החללים ולבחור את הזווית המתאימה לכל חדר.',image:'gear-lens',alt:'עדשת Canon RF 15–30mm'},
+  motion:{name:'DJI RS 5',category:'הגימבל / תנועה חלקה',copy:'מייצב מצלמה לצילום תוך כדי תנועה. מאפשר לעבור בין החדרים וליצור סיור וידאו חלק ונעים לצפייה.',image:'gear-gimbal',alt:'גימבל DJI RS 5'},
+  drone:{name:'DJI Mini 4K',category:'הרחפן / נקודת מבט מהאוויר',copy:'הרחפן שלי מוסיף מבט על הנכס והסביבה שלו מלמעלה. לצילומי חוץ ותמונות אוויר, בהתאם למיקום ולתנאי הטיסה.',image:'gear-drone',alt:'רחפן DJI Mini 4K'},
+  audio:{name:'DJI Mic Mini',category:'המיקרופון / קול ברור',copy:'מערכת מיקרופון אלחוטית להקלטת דיבור כשמשלבים הצגת נכס או קריינות בצילום.',image:'gear-mic',alt:'מיקרופון DJI Mic Mini עם מקלט'},
+  tripod:{name:'חצובה',category:'החצובה / יציבות ודיוק',copy:'בסיס יציב לתכנון הקומפוזיציה, לשמירה על קווים ולצילום מוקפד של החלל.',image:'tripod',alt:'חצובת הצילום מתוך הקטלוג של גל'}
 };
 
 /* Accessible, filterable gallery and keyboard-operated native dialog. */
@@ -59,12 +59,12 @@ document.querySelectorAll('[data-gear]').forEach(button=>button.addEventListener
   const item=gear[button.dataset.gear];
   document.querySelectorAll('[data-gear]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
   document.querySelector('#gear-name').textContent=item.name;
-  document.querySelector('#gear-name').dir=['drone','tripod'].includes(button.dataset.gear)?'rtl':'ltr';
+  document.querySelector('#gear-name').dir=button.dataset.gear==='tripod'?'rtl':'ltr';
   document.querySelector('#gear-category').textContent=item.category;
   document.querySelector('#gear-copy').textContent=item.copy;
-  const img=document.querySelector('#gear-image');const icon=document.querySelector('#gear-icon');
-  img.hidden=!item.image;icon.hidden=!!item.image;
-  if(item.image){img.src=`assets/${item.image}.webp`;img.alt=item.name+' — מתוך הקטלוג';}else{icon.textContent=item.icon;}
+  const img=document.querySelector('#gear-image');
+  img.src=`assets/${item.image}.webp`;
+  img.alt=item.alt;
 }));
 
 /* Verified contact settings live in config.js. Never invent a business number. */
