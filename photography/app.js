@@ -36,17 +36,13 @@ function renderGallery(filter='all'){
     const img=document.createElement('img');img.src=`assets/${p.file}.webp`;img.alt=p.alt;img.loading='lazy';img.width=1672;img.height=941;
     const expand=document.createElement('span');expand.className='photo-expand';expand.textContent='↗';expand.setAttribute('aria-hidden','true');
     button.append(img,expand);button.addEventListener('click',()=>{showPhoto(index);lightbox.showModal();});
-    const caption=document.createElement('figcaption');
-    const title=document.createElement('span');title.textContent=p.title;
-    const label=document.createElement('span');label.textContent=p.label;label.dir='ltr';
-    caption.append(title,label);figure.append(button,caption);return figure;
+    figure.append(button);return figure;
   }));
 }
 function showPhoto(index){
   photoIndex=(index+visiblePhotos.length)%visiblePhotos.length;
   const p=visiblePhotos[photoIndex];
   const img=document.querySelector('#lightbox-image');img.src=`assets/${p.file}.webp`;img.alt=p.alt;
-  document.querySelector('#lightbox-caption').textContent=`${p.title} · ${photoIndex+1} / ${visiblePhotos.length}`;
 }
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
   document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
