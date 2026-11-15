@@ -23,8 +23,9 @@ Set `phone` and `whatsapp` in `dist/config.js` to the verified business number: 
 
 ## Assets and factual accuracy
 
-The portfolio uses Gal's supplied photographs and images extracted from the supplied PDF, with watermarks intact. Equipment: Canon EOS R8, Canon RF 15–30mm, DJI Mic Mini, tripod, and Gal's updated DJI RS5 and drone. No drone model is assumed. The supplied MOV was converted to a full-length 720p H.264/AAC MP4, preserving its audio, with fast-start streaming. Original source files remain untouched.
+The portfolio uses Gal's supplied photographs and images extracted from the supplied PDF, with the overlaid gallery watermarks removed as requested. Equipment: Canon EOS R8, Canon RF 15–30mm, DJI Mic Mini, tripod, and Gal's updated DJI RS5 and drone. No drone model is assumed. The supplied MOV was converted to a full-length 720p H.264/AAC MP4, preserving its audio, with fast-start streaming. Original source files remain untouched.
 
 ## Release notes
 
 Business phone and personal domain still require confirmation. GitHub Pages publication uses the isolated `/photography/` path to preserve the existing curtains site at the repository root.
+

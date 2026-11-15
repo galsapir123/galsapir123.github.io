@@ -1,11 +1,11 @@
 /* Portfolio data stays separate from the rendering and interaction logic. */
 const photographs = [
-  {file:'living',title:'אור, עץ ומרחב פתוח',type:'interior',label:'INTERIORS / 01',alt:'סלון מואר עם ספה בהירה ורצפת עץ, צילום נדל״ן עם סימן המים המקורי'},
-  {file:'pool',title:'כשהערב משנה את האווירה',type:'exterior',label:'EXTERIORS / 02',alt:'בריכת שחייה מוארת לצד בית בשעות הערב'},
-  {file:'kitchen',title:'הפרטים שעושים בית',type:'interior',label:'INTERIORS / 03',alt:'מטבח לבן עם שולחן עץ וכיסאות בגוון חמרה'},
-  {file:'balcony',title:'מקום לנשום',type:'exterior',label:'EXTERIORS / 04',alt:'מרפסת עם פינת ישיבה פתוחה לנוף'},
-  {file:'bathroom',title:'שקט בקווים נקיים',type:'interior',label:'INTERIORS / 05',alt:'חדר רחצה בהיר עם מקלחון זכוכית וסימן מים מקורי'},
-  {file:'interior',title:'לראות את החיבור בין החללים',type:'interior',label:'INTERIORS / 06',alt:'חלל מגורים רחב עם מטבח, סלון ופרטי צמחייה'}
+  {file:'living-clean',title:'אור, עץ ומרחב פתוח',type:'interior',label:'INTERIORS / 01',alt:'סלון מואר עם ספה בהירה ורצפת עץ, צילום נדל״ן'},
+  {file:'pool-clean',title:'כשהערב משנה את האווירה',type:'exterior',label:'EXTERIORS / 02',alt:'בריכת שחייה מוארת לצד בית בשעות הערב'},
+  {file:'kitchen-clean',title:'הפרטים שעושים בית',type:'interior',label:'INTERIORS / 03',alt:'מטבח לבן עם שולחן עץ וכיסאות בגוון חמרה'},
+  {file:'balcony-clean',title:'מקום לנשום',type:'exterior',label:'EXTERIORS / 04',alt:'מרפסת עם פינת ישיבה פתוחה לנוף'},
+  {file:'bathroom-clean',title:'שקט בקווים נקיים',type:'interior',label:'INTERIORS / 05',alt:'חדר רחצה בהיר עם מקלחון זכוכית'},
+  {file:'interior-clean',title:'לראות את החיבור בין החללים',type:'interior',label:'INTERIORS / 06',alt:'חלל מגורים רחב עם מטבח, סלון ופרטי צמחייה'}
 ];
 const gear = {
   camera:{name:'Canon EOS R8',category:'FULL FRAME / CAMERA',copy:'מצלמת Full Frame ללכידת האור, הצבע והפרטים של החלל.',image:'camera'},
