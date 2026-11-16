@@ -45,6 +45,8 @@
 }
 @media(max-width:370px){.price-row{padding-inline:8px;gap:8px}.price-description h3{font-size:16px}.price-value{font-size:29px}}
 
+.pricing-distance-note{display:block;margin-top:6px;font-size:12px;line-height:1.7;color:var(--muted)}
+
 /* Equipment chooser: image-led buttons with clear selected and focus states. */
 .gear-tabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:0 0 32px;padding:0;border:0}
 .gear-tabs button{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:170px;padding:16px 10px;border:1px solid #c7c4b7;border-radius:10px;background:var(--white);color:var(--ink);text-align:center;transition:border-color .2s,box-shadow .2s,background .2s}
