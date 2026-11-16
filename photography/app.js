@@ -25,10 +25,21 @@ const gear = {
 /* Accessible, filterable gallery and keyboard-operated native dialog. */
 const gallery=document.querySelector('#gallery');
 const lightbox=document.querySelector('#lightbox');
+const morePhotosButton=document.querySelector('#more-photos');
+const additionalPhotoFiles=new Set(['pool-clean','balcony-clean','interior-clean']);
+let galleryExpanded=false;
+let activeFilter='all';
 let visiblePhotos=photographs;
 let photoIndex=0;
 function renderGallery(filter='all'){
-  visiblePhotos=photographs.filter(p=>filter==='all'||p.type===filter);
+  activeFilter=filter;
+  const matching=photographs.filter(p=>filter==='all'||p.type===filter);
+  const featured=matching.filter(p=>!additionalPhotoFiles.has(p.file));
+  const additional=matching.filter(p=>additionalPhotoFiles.has(p.file));
+  visiblePhotos=galleryExpanded?[...featured,...additional]:featured;
+  morePhotosButton.hidden=additional.length===0;
+  morePhotosButton.textContent=galleryExpanded?'פחות תמונות ↑':'עוד תמונות +';
+  morePhotosButton.setAttribute('aria-expanded',String(galleryExpanded));
   gallery.replaceChildren(...visiblePhotos.map((p,index)=>{
     const figure=document.createElement('figure');
     const button=document.createElement('button');
@@ -39,6 +50,10 @@ function renderGallery(filter='all'){
     figure.append(button);return figure;
   }));
 }
+morePhotosButton.addEventListener('click',()=>{
+  galleryExpanded=!galleryExpanded;
+  renderGallery(activeFilter);
+});
 function showPhoto(index){
   photoIndex=(index+visiblePhotos.length)%visiblePhotos.length;
   const p=visiblePhotos[photoIndex];
